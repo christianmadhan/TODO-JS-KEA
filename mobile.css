@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid: 150px / auto;
+    grid-gap: 10px;
+    background-color: gray;
+    padding: 5px;
+  }
+}
