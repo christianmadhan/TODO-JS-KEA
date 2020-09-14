@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>TODO APP</title>
   </head>
   <body>
@@ -11,21 +15,37 @@
       <h4>TODO APP</h4>
     </header>
     <main>
+      <div id="addTaskModal" class="modal hidden">
+        <div class="modal-content">
+          <textarea name="" id="newTaskText" cols="30" rows="10"></textarea>
+          <div class="modal-buttons">
+            <button class="addBtn" id="addTaskButton" onclick="addTask()">
+              Add Task
+            </button>
+            <button
+              class="addBtn"
+              id="cancelAddModalButton"
+              onclick="closeModal()"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="grid-container">
         <div class="item">
           <p>Tasks</p>
-          <button>Add Task</button>
-          <ul>
-            <li draggable="true">
-              <div>
-                <p>something</p>
-              </div>
-              <button>something</button>
-            </li>
-          </ul>
+          <ul id="task-list"></ul>
+          <button class="addBtn" onclick="openModal()">Add Task</button>
         </div>
-        <div class="item">
+        <div
+          id="target"
+          ondrop="drop_handler(event)"
+          ondragover="dragover_handler(event)"
+          class="item"
+        >
           <p>In Progress</p>
+          <ul></ul>
         </div>
         <div class="item">
           <p>Done</p>

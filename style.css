@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -54,4 +56,59 @@ ul {
 li {
   display: flex;
   justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  left: 3%;
+  width: 94%;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: gray;
+  background-color: white;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: start;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.addBtn {
+  border-radius: 10px;
+  height: 50px;
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  height: 300px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-item img {
+  height: 30px;
+  padding-top: 3px;
+  padding-left: 20px;
+}
+
+.task-item {
+  background-color: red;
+  border: solid;
+  border-style: groove;
+  border-radius: 10px;
+  border-color: lightcoral;
 }
